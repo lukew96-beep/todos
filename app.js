@@ -7,8 +7,9 @@ for (let i = 0; i < savedTodos.length; i++){
   newTodo.isCompleted = savedTodos[i].isCompleted ? true: false;
   if(newTodo.isCompleted){
     newTodo.style.textDecoration = "line-through";
-    todoList.appendChild(newTodo)
   }
+  todoList.appendChild(newTodo);
+  const newBtn = newTodo.appendChild(document.createElement('button'));
 }
 todoForm.addEventListener('submit', function(e){
     e.preventDefault();
